@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Handling Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="hero">
+      <div class="hero-tag">JavaScript</div>
+      <h1>Event Handling<br><span>Demo</span></h1>
+      <p class="hero-sub">Click, type, hover, focus — see every event in action.</p>
+    </header>
+
+    <!-- OUTPUT LOG -->
+    <div class="log-panel">
+      <div class="log-header">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="log-title">event log</span>
+        <button id="clearLog" class="clear-btn">clear</button>
+      </div>
+      <div id="output" class="log-body">
+        <p class="placeholder">Events will appear here…</p>
+      </div>
+    </div>
+
+    <!-- CARDS GRID -->
+    <div class="cards-grid">
+
+      <!-- CLICK EVENT -->
+      <div class="card" id="card-click">
+        <div class="card-label">click</div>
+        <h2>Button Click</h2>
+        <p>Fires every time the button is pressed.</p>
+        <button id="clickBtn" class="btn btn-primary">Click Me</button>
+      </div>
+
+      <!-- INPUT & CHANGE EVENTS -->
+      <div class="card" id="card-input">
+        <div class="card-label">input · change</div>
+        <h2>Text Input</h2>
+        <p>Reflects every keystroke (input) and final value (change).</p>
+        <input id="textInput" type="text" placeholder="Type something…" class="field" />
+        <div class="live-preview" id="livePreview">—</div>
+      </div>
+
+      <!-- KEYUP EVENT -->
+      <div class="card" id="card-keyup">
+        <div class="card-label">keyup</div>
+        <h2>Key Detector</h2>
+        <p>Shows the last key released inside this field.</p>
+        <input id="keyInput" type="text" placeholder="Press any key…" class="field" />
+        <div class="key-badge" id="keyBadge">—</div>
+      </div>
+
+      <!-- FOCUS & BLUR EVENTS -->
+      <div class="card" id="card-focus">
+        <div class="card-label">focus · blur</div>
+        <h2>Focus &amp; Blur</h2>
+        <p>Field glows on focus, dims on blur.</p>
+        <input id="focusInput" type="text" placeholder="Click to focus…" class="field" />
+        <div class="status-chip" id="focusStatus">unfocused</div>
+      </div>
+
+      <!-- MOUSEOVER & MOUSEOUT EVENTS -->
+      <div class="card" id="card-hover">
+        <div class="card-label">mouseover · mouseout</div>
+        <h2>Hover Zone</h2>
+        <p>Move your cursor into and out of the zone below.</p>
+        <div id="hoverZone" class="hover-zone">
+          <span id="hoverLabel">Hover here</span>
+        </div>
+      </div>
+
+      <!-- FORM SUBMIT EVENT -->
+      <div class="card card-wide" id="card-form">
+        <div class="card-label">submit</div>
+        <h2>Form Submit</h2>
+        <p>Handles submission without reloading the page.</p>
+        <form id="demoForm" class="demo-form">
+          <div class="form-row">
+            <input id="nameInput" type="text" placeholder="Your name" class="field" required />
+            <input id="emailInput" type="email" placeholder="your@email.com" class="field" required />
+          </div>
+          <button type="submit" class="btn btn-accent">Submit Form</button>
+        </form>
+        <div id="formResult" class="form-result hidden"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
